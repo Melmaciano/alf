@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    width: 100vw;
+}
+
+html {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+main li {
+    font-size: calc(12px + 0.8vw);
+    margin: 5% auto;
+    width: 80vw;
+}
+
+li::marker {
+    content: none;
+}
+
+span {
+    position: sticky;
+    top: 5%;
+    font-size: 1.5em;
+    margin-left: -1em;
+    font-weight: bold;
+}
+
+header {
+    z-index: 2;
+    position: relative;
+    height: calc(400px * 4/3);
+    margin-bottom: calc(-400px * 4/3 + 2em);
+}
+
+.alf {
+    display: block;
+    max-width: min(80%, 400px);
+    margin: 0 auto;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    height: auto;
+    background-color: bisque;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    gap: 25px;
+    box-shadow: 1px 1px 10px 2px rgb(158, 91, 8),
+    inset 1px 1px 5px 0 rgb(158, 91, 8);
+}
+
+.logo::after {
+    content: "LELU";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+nav > div:nth-child(2) {
+    text-align: center;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-size: clamp(12px, 12px + 1.4vw, 16px);
+}
+
+nav p {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+ul.links {
+    display: flex;
+    gap: calc(4px + 0.5vw);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #5e3605;
+}
+
+a:hover {
+    color: #ff8c00;
+    text-shadow: 0 0 .5px #743e00;
+}
+
+a:active {
+    color: #94897c;
+    text-shadow: 0 0 .5px #644e34;
+}
+
+a:visited {
+    color: #94897c;
+    text-shadow: 0 0 .5px #644e34;
+}
+
+hr {
+    display: none;
+    box-shadow: 1px 1px 1px rgb(158, 91, 8)
+}
+
+.btn {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    left: 85%;
+    opacity: "0";
+}
+
+.btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    animation: 1.2s ease-in 0s infinite btn-animation;
+}
+
+@keyframes btn-animation {
+    0% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        height: 70vw;
+        margin-bottom: calc(-70vw + 12em);
+    }
+
+    nav {
+        flex-direction: column;
+        position: static;
+    }
+
+    hr {
+        display: block;
+        width: 95%;
+        border: 1px solid #743e00;
+    }
+
+    nav ul {
+        margin: 0 5%;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        align-self: flex-start;
+    }
+
+    main ul {
+        padding-left: 8%
+    }
+}
