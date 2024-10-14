@@ -1,10 +1,10 @@
 .alf {
     aspect-ratio: 0.9;
-    background-color: antiquewhite;
     position: relative;
     top: 20%;
     margin: 0 auto;
     margin-top: 50px;
+    filter: drop-shadow(-10px 2px 1px)
 }
 
 .head {
@@ -25,6 +25,7 @@
 	border-bottom-right-radius: 50% 40%;
 	border-bottom-left-radius: 50% 40%; 
     border: solid 1px #814f0d;
+    filter: drop-shadow(-2px 6px 1px)
 }
 
 .face {
@@ -362,6 +363,7 @@
     left: 60%;
     top: -8%;
     border: solid 1px #814f0d;
+    filter: drop-shadow(-4px 2px 1px)
 }
 
 .hair-shadow {
@@ -429,11 +431,12 @@
         #b97112 80%
     );
     left: 75%;
-    top: 5%;
+    top: 4%;
     border-top-left-radius: 20% 10%;
     border-top-right-radius: 80% 50%;
     box-shadow: 0 0 2px 1px #814f0d;
     border-right: 1px solid #814f0d;
+    filter: drop-shadow(-5px 2px 1px)
 }
 
 .left-arm {
@@ -473,6 +476,7 @@
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
     border-right: 1px solid #814f0d;
+    filter: drop-shadow(5px 2px 1px)
 }
 
 .thumb {
